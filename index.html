@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-    <!-- Importing Boxicons for icons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <!-- Linking external CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,20 +13,36 @@
             <h2>Login</h2>
             <div class="input-box">
                 <i class="bx bxs-user"></i>
-                <input type="text" placeholder="Username" required>
+                <input type="text" placeholder="Username" id="username" required>
             </div>
             <div class="input-box">
                 <i class="bx bxs-lock-alt"></i>
-                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Password" id="password" required>
             </div>
-            <button class="btn">Login</button>
+            <button class="btn" onclick="login()">Login</button>
             <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
-
         </div>
         <div class="welcome-text">
-            <h2>Welcome</h2>
-            <p>ทดสอบจากคณะรักเธอนะจ๊ะ จำกัด</p>
+            <h2>Hi!!</h2>
+            <p>do you want to know more about me?</p>
         </div>
     </div>
+
+    <!-- JavaScript -->
+    <script>
+        function login() {
+            // Get the values of username and password fields
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Check if both fields are filled (optional validation)
+            if (username && password) {
+                // Redirect to the GitHub page
+                window.location.href = "https://github.com/Bookmenefit";
+            } else {
+                alert("Please enter both username and password.");
+            }
+        }
+    </script>
 </body>
 </html>
